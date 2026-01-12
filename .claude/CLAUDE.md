@@ -201,3 +201,40 @@ ANALYZE table_name;
 
 **Do not modify:**
 - [Files or areas that should not be changed]
+
+
+## Writing Style & AI Phrase Avoidance
+
+### Avoid AI Buzzwords
+Replace these overused AI phrases with clearer alternatives:
+- `leverage` → use, apply
+- `synergy` → teamwork, working together
+- `cutting-edge` → new, advanced, latest
+- `robust` → strong, solid
+- `seamlessly` → works well, easy to use
+- `utilize` → use
+- `revolutionary/transformative/game-changing` → describe specific impacts
+- `scalable solution` → expandable, easily adjustable
+- `innovative` → new, creative (or describe what's actually new)
+
+### Avoid AI Filler Phrases
+These add no value and signal AI-generated content:
+- `moreover/furthermore` → also, or split into two sentences
+- `in conclusion` → so, to wrap up
+- `it is important to note` → state the point directly
+- `in today's society/fast-paced world` → be specific about time or setting
+- `harnessing the power of` → use, tap into
+- `this essay/document will discuss` → start with the argument directly
+
+### Natural Writing Guidelines
+- Use conversational tone (as if explaining to a colleague)
+- Prefer concrete details over vague claims
+- Avoid overly formal or academic phrasing
+- Read documentation aloud - if it doesn't sound like something you'd say, rewrite it
+- Show don't tell: instead of "innovative solution", describe what's actually new
+
+### In Code Comments & Documentation
+- Write comments as you would explain to a teammate
+- Be direct and specific
+- Avoid marketing-speak in technical docs
+- Focus on "what" and "why", not impressive-sounding adjectives
