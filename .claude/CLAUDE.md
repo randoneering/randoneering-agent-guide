@@ -216,6 +216,7 @@ Replace these overused AI phrases with clearer alternatives:
 - `revolutionary/transformative/game-changing` → describe specific impacts
 - `scalable solution` → expandable, easily adjustable
 - `innovative` → new, creative (or describe what's actually new)
+- `comprehensive` → complete, detailed, thorough (or be specific)
 
 ### Avoid AI Filler Phrases
 These add no value and signal AI-generated content:
