@@ -105,23 +105,16 @@ import pandas as pd
 from pydantic import BaseModel
 
 
+# Example data model with proper spacing
 class DataModel(BaseModel):
-    """Example data model with proper spacing."""
-
     field_one: str
     field_two: int
 
 
+# Process input data and return DataFrame
+# Args: input_data - List of dictionaries containing raw data
+# Returns: Processed pandas DataFrame
 def process_data(input_data: list[dict[str, Any]]) -> pd.DataFrame:
-    """
-    Process input data and return DataFrame.
-
-    Args:
-        input_data: List of dictionaries containing raw data
-
-    Returns:
-        Processed pandas DataFrame
-    """
     return pd.DataFrame(input_data)
 ```
 
@@ -144,23 +137,21 @@ from typing import Any, Protocol
 from pydantic import BaseModel
 
 
+# Protocol defining repository interface
 class Repository(Protocol):
-    """Protocol defining repository interface."""
-
     def get(self, id: str) -> dict[str, Any] | None:
         ...
 
 
+# User model with validation
 class User(BaseModel):
-    """User model with validation."""
-
     username: str
     email: str
     age: int | None = None
 
 
+# Fetch user from repository with type safety
 def fetch_user(repo: Repository, user_id: str) -> User | None:
-    """Fetch user from repository with type safety."""
     data = repo.get(user_id)
     return User(**data) if data else None
 ```
@@ -187,12 +178,11 @@ def fetch_user(repo: Repository, user_id: str) -> User | None:
 
 ## Documentation and Comments
 
-### Docstrings (PEP 257)
-- Provide docstrings for all public modules, classes, and functions
-- Use triple quotes: `"""Docstring text."""`
-- First line: brief summary (ends with period)
-- Detailed description after blank line if needed
-- Document parameters, return values, and exceptions
+### Comment Style
+- **MUST use single-line `#` comments** instead of multi-line `""" """` strings
+- Keep comments concise and to the point
+- Place comments on the line above the code they describe
+- Use inline comments sparingly for brief clarifications
 
 ### Comment Philosophy
 - Comment to explain **WHY**, not **WHAT**
@@ -202,27 +192,20 @@ def fetch_user(repo: Repository, user_id: str) -> User | None:
 
 ### Example Documentation
 ```python
+# Calculate compound interest using the standard formula
+# Args:
+#   principal: Initial amount invested
+#   rate: Annual interest rate as decimal (e.g., 0.05 for 5%)
+#   time: Time period in years
+#   compound_frequency: Times per year interest compounds (default: 1)
+# Returns: Final amount after compound interest
+# Raises: ValueError if principal, rate, or time is negative
 def calculate_compound_interest(
     principal: float,
     rate: float,
     time: int,
     compound_frequency: int = 1
 ) -> float:
-    """
-    Calculate compound interest using the standard formula.
-
-    Args:
-        principal: Initial amount invested
-        rate: Annual interest rate as decimal (e.g., 0.05 for 5%)
-        time: Time period in years
-        compound_frequency: Times per year interest compounds (default: 1)
-
-    Returns:
-        Final amount after compound interest
-
-    Raises:
-        ValueError: If principal, rate, or time is negative
-    """
     if principal < 0 or rate < 0 or time < 0:
         raise ValueError("Values must be non-negative")
 
@@ -246,20 +229,13 @@ import logging
 logger = logging.getLogger(__name__)
 
 
+# Process user data with proper error handling
+# Args: user_id - Unique user identifier
+# Returns: Processed user data dictionary
+# Raises:
+#   ValueError: If user_id is empty or invalid format
+#   UserNotFoundError: If user doesn't exist
 def process_user_data(user_id: str) -> dict[str, Any]:
-    """
-    Process user data with proper error handling.
-
-    Args:
-        user_id: Unique user identifier
-
-    Returns:
-        Processed user data dictionary
-
-    Raises:
-        ValueError: If user_id is empty or invalid format
-        UserNotFoundError: If user doesn't exist
-    """
     if not user_id or not user_id.strip():
         raise ValueError("user_id cannot be empty")
 
@@ -317,6 +293,76 @@ project/
 - Use **absolute imports** from other packages: `from app.services import UserService`
 - Avoid circular imports through careful module organization
 
+## Script Organization
+
+### Structure Order for Standalone Scripts
+Organize standalone Python scripts in the following order:
+
+1. **Imports** - All import statements at the top
+2. **Hard-coded variables and constants** - Configuration values, static data
+3. **Dictionaries and data structures** - Lookup tables, mappings
+4. **Class definitions** - Any classes needed for the script
+5. **Functions** - Organized in the order they're called in `main()`
+6. **Main execution block** - `if __name__ == "__main__":` with `main()` function
+
+### Example Script Structure
+```python
+import os
+from pathlib import Path
+from typing import Any
+
+# Hard-coded variables
+API_ENDPOINT = "https://api.example.com"
+MAX_RETRIES = 3
+TIMEOUT_SECONDS = 30
+
+# Data structures
+STATUS_CODES = {
+    200: "success",
+    404: "not_found",
+    500: "server_error"
+}
+
+# Classes
+class DataProcessor:
+    # Process data for the script
+    def __init__(self, config: dict[str, Any]):
+        self.config = config
+    
+    def process(self, data: list[dict]) -> list[dict]:
+        # Transform input data
+        return [self._transform(item) for item in data]
+    
+    def _transform(self, item: dict) -> dict:
+        # Apply transformations
+        return item
+
+# Functions in execution order
+def load_config() -> dict[str, Any]:
+    # Load configuration from file
+    config_path = Path.home() / ".config" / "app.json"
+    return {}
+
+def fetch_data(endpoint: str) -> list[dict]:
+    # Fetch data from API
+    return []
+
+def save_results(data: list[dict], output_path: Path) -> None:
+    # Save processed results to file
+    output_path.write_text(str(data))
+
+def main() -> None:
+    # Main execution flow
+    config = load_config()
+    processor = DataProcessor(config)
+    data = fetch_data(API_ENDPOINT)
+    results = processor.process(data)
+    save_results(results, Path("output.json"))
+
+if __name__ == "__main__":
+    main()
+```
+
 ## Configuration Management
 
 ### Environment Variables
@@ -331,16 +377,15 @@ from pydantic import BaseModel, Field
 import os
 
 
+# Application configuration with validation
 class AppConfig(BaseModel):
-    """Application configuration with validation."""
-
     debug: bool = Field(default=False)
     database_url: str = Field(...)
     max_connections: int = Field(default=10, ge=1, le=100)
 
     @classmethod
+    # Load configuration from environment variables
     def from_env(cls) -> "AppConfig":
-        """Load configuration from environment variables."""
         return cls(
             debug=os.getenv("DEBUG", "false").lower() == "true",
             database_url=os.getenv("DATABASE_URL", ""),
@@ -396,32 +441,32 @@ from app.services import UserService
 
 
 @pytest.fixture
+# Provide UserService instance for tests
 def user_service():
-    """Provide UserService instance for tests."""
     return UserService()
 
 
 @pytest.fixture
+# Provide sample user data
 def sample_user():
-    """Provide sample user data."""
     return {"id": "user123", "name": "John Doe"}
 
 
+# Test successful user retrieval
 def test_get_user_success(user_service):
-    """Test successful user retrieval."""
     user = user_service.get_user("user123")
     assert user is not None
     assert user.id == "user123"
 
 
+# Test user not found raises appropriate exception
 def test_get_user_not_found(user_service):
-    """Test user not found raises appropriate exception."""
     with pytest.raises(UserNotFoundError):
         user_service.get_user("nonexistent")
 
 
+# Test user creation with fixture data
 def test_create_user(user_service, sample_user):
-    """Test user creation with fixture data."""
     user = user_service.create_user(sample_user)
     assert user.name == "John Doe"
 ```
@@ -456,14 +501,14 @@ def test_create_user(user_service, sample_user):
 ```python
 import asyncio
 
+# Fetch data asynchronously
 async def fetch_data(url: str) -> dict:
-    """Fetch data asynchronously."""
     # Use aiohttp or similar for actual HTTP calls
     await asyncio.sleep(1)
     return {"status": "success"}
 
+# Run multiple async operations concurrently
 async def main():
-    """Run multiple async operations concurrently."""
     results = await asyncio.gather(
         fetch_data("url1"),
         fetch_data("url2")

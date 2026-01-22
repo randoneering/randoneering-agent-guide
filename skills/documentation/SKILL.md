@@ -31,17 +31,51 @@ Guidelines for writing clear, natural, human-sounding documentation that avoids 
 | Avoid | Use Instead |
 |-------|-------------|
 | leverage | use, apply, take advantage of |
+| utilize | use |
+| optimize | improve, tune, adjust |
+| streamline | simplify, improve |
+| integrate | combine, connect, add |
+| implement | add, create, build |
+| transform | change, convert, update |
+| innovate | create, improve, build |
+| modernize | update, upgrade |
 | synergy | teamwork, working together, combined effect |
 | cutting-edge | new, advanced, latest, modern |
 | robust | strong, solid, reliable |
 | seamlessly | works well, easy to use, smooth |
-| utilize | use |
 | innovative | new, creative (or describe what's actually new) |
 | revolutionary | (describe the specific change) |
 | transformative | (describe the actual impact) |
 | game-changing | significant, major, substantial |
 | scalable solution | expandable, easily adjustable |
 | harnessing the power of | use, tap into, apply |
+| bespoke | custom, tailored, specialized |
+| meticulous | careful, detailed, thorough |
+| comprehensive | complete, thorough, detailed |
+| extensive | large, wide-ranging, broad |
+| crucial | important, essential, critical |
+| vital | important, essential, necessary |
+| key | important, main, primary |
+| endeavors | efforts, attempts, work |
+| tapestry | mix, combination, collection |
+| unlock | enable, allow, provide access to |
+| reveal | show, demonstrate, display |
+| discover | find, learn, identify |
+| explore | examine, investigate, look at |
+| foster | support, encourage, help |
+| refine | improve, polish, enhance |
+| develop | create, build, make |
+| analyze | examine, review, study |
+| improve | make better, enhance |
+| boost | increase, improve, raise |
+| advisable | recommended, suggested, wise |
+| daunting | challenging, difficult, intimidating |
+| verify/verifying | check, confirm, validate |
+| confirm | verify, check |
+| tailor/tailored | customize, adjust, adapt |
+| underscore/underpin | emphasize, highlight, support |
+| navigating | dealing with, handling, managing |
+| complexities | challenges, difficulties, issues |
 
 ### AI Filler Phrases to Avoid
 
@@ -49,10 +83,20 @@ Guidelines for writing clear, natural, human-sounding documentation that avoids 
 |-------|-------------|
 | moreover / furthermore | also, additionally (or split into two sentences) |
 | in conclusion | so, to wrap up, finally |
+| ultimately | finally, in the end (or just state the point) |
 | it is important to note | (state the point directly) |
 | in today's society / fast-paced world | (be specific about time or context) |
 | this document will discuss | (start with the topic directly) |
 | the impact of X on Y | (describe the effect in concrete terms) |
+| regarding | about, concerning (or just name the topic) |
+| towards | to, for (often unnecessary) |
+| among | in, within (context-dependent) |
+| whether | (often used excessively; rephrase directly) |
+| changing | evolving, shifting (or describe the actual change) |
+| build/building | create, make (less generic) |
+| core | main, central, primary |
+| scope | range, extent (or be specific) |
+| array/package | set, group, collection |
 
 ### Example Transformations
 
@@ -61,6 +105,29 @@ Guidelines for writing clear, natural, human-sounding documentation that avoids 
 
 **Good (natural):**
 > "This tool works with your existing systems and scales as your needs grow. It reduces deployment time from hours to minutes by automating the configuration process."
+
+### AI Sentence Patterns to Avoid
+
+AI often uses repetitive sentence structures that make text sound formulaic:
+
+| Pattern | Why It's AI-Typical | Better Approach |
+|---------|---------------------|-----------------|
+| "It's like having a..." | Overused analogy starter | Use varied comparisons or skip the analogy |
+| "By doing X, you can..." | Repetitive benefit formula | Vary sentence structure: "X lets you...", "You can..." |
+| "Imagine this..." | Formulaic scenario intro | Start with the scenario directly |
+| "It's not just X, it's also Y" | Artificial emphasis pattern | State both points naturally |
+| "Whether you're A, B, or C..." | Generic audience listing (always 3) | Be specific about actual audience |
+| "In today's fast-paced world..." | Meaningless time reference | Skip it or be specific |
+| "This allows you to..." | Overused transition | Use "You can...", "This lets you..." |
+| "The key is to..." | Formulaic advice opener | State the advice directly |
+
+**Examples:**
+
+**Bad (AI patterns):**
+> "It's like having a personal assistant that handles all your database queries. By using this tool, you can save hours of manual work. Whether you're a developer, DBA, or data analyst, this solution is perfect for you."
+
+**Good (natural variation):**
+> "This tool runs your database queries automatically. You'll save hours of manual work. Developers use it for testing, DBAs for monitoring, and analysts for reporting."
 
 ## Documentation Structure
 
@@ -301,8 +368,9 @@ Scan for these patterns (all are red flags):
 ## Quick Reference
 
 **Before publishing, check:**
-- [ ] No AI buzzwords (leverage, synergy, cutting-edge, robust, seamlessly)
-- [ ] No AI fillers (moreover, in conclusion, it is important to note)
+- [ ] No AI buzzwords (leverage, utilize, optimize, innovate, comprehensive, etc.)
+- [ ] No AI fillers (moreover, ultimately, regarding, it is important to note)
+- [ ] No AI sentence patterns ("It's like having a...", "By doing X, you can...", "Whether you're...")
 - [ ] Active voice and present tense
 - [ ] Concrete examples with real numbers
 - [ ] Audience-appropriate technical depth
