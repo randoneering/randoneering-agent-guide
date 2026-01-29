@@ -1,11 +1,31 @@
 ---
 name: writing-style
-description: "Justin's personal blog writing style for Hugo site content. Triggers: blog posts, weekly updates, technical tutorials. Covers conversational tone, honest reflection, technical accessibility, and storytelling approach."
+description: "Justin's personal blog writing style for Hugo site content. Triggers: blog posts, weekly updates, technical tutorials. Covers conversational tone, honest reflection, technical accessibility, Strunk's clarity principles, and AI pattern avoidance."
 ---
 
 # Justin's Writing Style Guide
 
-Guidelines for writing blog posts and content that matches the established voice and style of this Hugo site.
+Guidelines for writing blog posts and content that matches the established voice and style of this Hugo site. Combines personal voice with Strunk's clarity principles.
+
+## Strunk's Clarity Principles
+
+These rules from *The Elements of Style* apply to all writing:
+
+### The Essential Six
+
+1. **Use active voice** — "The server crashed" not "The server was crashed by the update"
+2. **Put statements in positive form** — "He forgot" not "He did not remember"
+3. **Use definite, specific, concrete language** — "The query took 3 seconds" not "The query was slow"
+4. **Omit needless words** — Cut ruthlessly. Every word must earn its place.
+5. **Keep related words together** — Don't separate subject from verb, modifier from modified
+6. **Place emphatic words at end of sentence** — The position of emphasis is the end
+
+### Composition Basics
+
+- One paragraph per topic
+- Begin paragraphs with topic sentence
+- Express coordinate ideas in similar form
+- Keep to one tense in summaries
 
 ## Core Voice Characteristics
 
@@ -30,6 +50,7 @@ Guidelines for writing blog posts and content that matches the established voice
 - Share actual code examples and configurations
 - Reference documentation and sources with links or footnotes
 - Balance technical depth with readability
+- Use definite, specific language — say what the code actually does
 
 ## Tone and Language
 
@@ -152,6 +173,14 @@ Interesting right? Turns out I needed to grab roles...
 - Explain parameters and flags
 - Warn about pitfalls: "I highly recommend... to AVOID putting a compression higher than 5"
 
+### Clarity in Technical Prose
+
+Apply Strunk's principles to technical writing:
+- **Active voice:** "The script backs up the database" not "The database is backed up by the script"
+- **Positive form:** "The command failed" not "The command did not succeed"
+- **Concrete language:** "Returns a 500 error after 30 seconds" not "Times out eventually"
+- **Cut the fluff:** Remove "basically", "essentially", "in order to", "the fact that"
+
 ### Citations and Sources
 
 Use footnotes for references:
@@ -191,24 +220,66 @@ Include sources at the end of articles, especially for:
 
 ## What to Avoid
 
-### Don't Use AI Buzzwords
-- No "leverage", "synergy", "cutting-edge"
-- No "seamlessly", "robust", "innovative"
-- Just say what it actually does
+### AI Writing Patterns
 
-### Don't Be Overly Formal
-- Avoid academic/corporate tone
+LLMs regress to statistical means, producing generic, puffy prose. Avoid:
+
+**Puffery words:**
+- pivotal, crucial, vital, testament, enduring legacy
+- game-changer, paradigm shift, revolutionary
+
+**Empty "-ing" phrases:**
+- ensuring reliability, showcasing features, highlighting capabilities
+- enabling seamless integration, driving innovation
+
+**Promotional adjectives:**
+- groundbreaking, seamless, robust, cutting-edge
+- best-in-class, world-class, industry-leading
+
+**Overused AI vocabulary:**
+- delve, leverage, multifaceted, foster
+- realm, tapestry, landscape, ecosystem
+- utilize (just say "use"), facilitate, empower
+
+**Formatting overuse:**
+- Excessive bullets where prose works better
+- Emoji decorations
+- Bold on every other word
+- Headers for everything
+
+### Corporate and Academic Speak
+
+Avoid formal, stiff language:
 - No "moreover", "furthermore", "in conclusion"
 - No "it is important to note that"
 - No "in today's fast-paced world"
+- No "leverage", "synergy", "cutting-edge"
+- No "seamlessly", "robust", "innovative"
 
-### Don't Hide Complexity
+Just say what it actually does.
+
+### Weak Writing Patterns
+
+**Hedging and qualifiers:**
+- "I think maybe...", "It seems like perhaps..."
+- "somewhat", "rather", "quite" (when meaningless)
+
+**Negative form (use positive instead):**
+- ❌ "He did not remember" → ✅ "He forgot"
+- ❌ "It's not uncommon" → ✅ "It's common"
+- ❌ "Don't use the wrong tool" → ✅ "Use the right tool"
+
+**Passive voice (use active instead):**
+- ❌ "The configuration was updated by the script" → ✅ "The script updated the configuration"
+- ❌ "Errors were encountered" → ✅ "The build hit three errors"
+
+### Hiding Complexity
 - Don't pretend things were easy if they weren't
 - Don't skip the messy parts
 - Don't oversell your solution
 - Share both successes and failures
 
-### Don't Gatekeep
+### Gatekeeping
 - Don't shame "normies" (except good-natured Twitter jokes)
 - Don't assume everyone knows what you know
 - Do explain acronyms and terms
@@ -272,19 +343,37 @@ Regular updates and news
 ## Quick Reference Checklist
 
 Before publishing, verify:
+
+**Voice:**
 - [ ] Written in first person with personal experience
 - [ ] Conversational tone, not corporate or academic
-- [ ] Technical concepts explained clearly
-- [ ] Code examples with context and explanation
 - [ ] Honest about challenges and mistakes
-- [ ] Headers organize content logically
-- [ ] Sources cited with footnotes or links
-- [ ] No AI buzzwords or corporate speak
 - [ ] Reflects actual learning journey
+
+**Clarity (Strunk):**
+- [ ] Active voice throughout
+- [ ] Statements in positive form
+- [ ] Specific, concrete language
+- [ ] Needless words cut
+- [ ] Emphatic words at sentence end
+
+**Technical:**
+- [ ] Concepts explained clearly
+- [ ] Code examples with context
+- [ ] Sources cited with footnotes or links
+- [ ] Headers organize content logically
+
+**Clean of AI patterns:**
+- [ ] No puffery (pivotal, crucial, testament)
+- [ ] No empty -ing phrases
+- [ ] No promotional adjectives (groundbreaking, seamless)
+- [ ] No overused AI words (delve, leverage, tapestry)
+- [ ] Formatting serves content, not decoration
+
 - [ ] Ends with practical takeaway or next steps
 
-**Key principle:** Write like you're explaining to a friend over coffee, not presenting at a conference. Be technical, be honest, be yourself.
+**Key principle:** Write like you're explaining to a friend over coffee, not presenting at a conference. Be technical, be honest, be yourself. Cut ruthlessly.
 
 ---
 
-**Note:** This is about voice and style, not content requirements. The goal is authenticity and accessibility, not perfection.
+**Note:** This is about voice and style, not content requirements. The goal is authenticity, clarity, and accessibility.
