@@ -516,6 +516,152 @@ async def main():
     return results
 ```
 
+## Systemd Service and Timer
+
+For Python scripts that run on a schedule (data collection, backups, ETL jobs), use systemd services with timers.
+
+### Directory Structure
+
+```
+project/
+├── systemd/
+│   ├── project-name.service    # Service unit file
+│   ├── project-name.timer      # Timer unit file
+│   └── README.md               # Installation instructions
+├── script.py
+├── config.yaml
+└── pyproject.toml
+```
+
+### Service File Template
+
+Create `systemd/project-name.service`:
+
+```ini
+[Unit]
+Description=Project Name daily task description
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=username
+Group=username
+WorkingDirectory=/home/username/code/project-name
+ExecStart=/home/username/.local/bin/uv run python script.py command
+StandardOutput=journal
+StandardError=journal
+
+# Restart on failure with delay
+Restart=on-failure
+RestartSec=300
+
+[Install]
+WantedBy=multi-user.target
+```
+
+**Key points:**
+- Use `network-online.target` with `Wants=` for network-dependent scripts
+- Use `uv run python` directly from `~/.local/bin/uv` (MUST NOT use `.venv/bin/python`)
+- Set `WorkingDirectory` to the project directory (allows running from repo)
+- Use `Type=oneshot` for scripts that run and exit
+- Add service dependencies in `After=` (e.g., `postgresql.service`)
+- Use `Restart=on-failure` with `RestartSec` delay for transient failures
+
+### Timer File Template
+
+Create `systemd/project-name.timer`:
+
+```ini
+[Unit]
+Description=Run Project Name daily at 6:00 AM
+
+[Timer]
+OnCalendar=*-*-* 06:00:00
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target
+```
+
+**Key points:**
+- `OnCalendar` uses systemd calendar syntax (`*-*-* HH:MM:SS` for daily)
+- `Persistent=true` runs missed executions after system boot
+- `RandomizedDelaySec` prevents thundering herd on shared systems
+
+### Common Timer Schedules
+
+```ini
+# Daily at 6 AM
+OnCalendar=*-*-* 06:00:00
+
+# Every 15 minutes
+OnCalendar=*:0/15
+
+# Hourly
+OnCalendar=hourly
+
+# Weekly on Sunday at midnight
+OnCalendar=Sun *-*-* 00:00:00
+
+# First of every month
+OnCalendar=*-*-01 00:00:00
+```
+
+### Installation README Template
+
+Create `systemd/README.md`:
+
+```markdown
+# Systemd Installation
+
+## Setup
+
+1. Copy files to systemd directory:
+   ```bash
+   sudo cp systemd/project-name.service /etc/systemd/system/
+   sudo cp systemd/project-name.timer /etc/systemd/system/
+   ```
+
+2. Create config:
+   ```bash
+   cp config.yaml.example config.yaml
+   chmod 600 config.yaml
+   # Edit config.yaml with your credentials
+   ```
+
+3. Enable and start timer:
+   ```bash
+   sudo systemctl daemon-reload
+   sudo systemctl enable project-name.timer
+   sudo systemctl start project-name.timer
+   ```
+
+## Commands
+
+Check timer status:
+```bash
+systemctl list-timers project-name.timer
+```
+
+Run manually:
+```bash
+sudo systemctl start project-name.service
+```
+
+View logs:
+```bash
+journalctl -u project-name.service
+```
+```
+
+### Service Naming Convention
+
+- Use lowercase with hyphens: `mercury-retrograde`, `py-weather`, `database-backup`
+- Match the project directory name when possible
+- Service and timer files MUST have matching names (e.g., `foo.service` and `foo.timer`)
+
 ## Common Patterns
 
 ### Project Structure Recognition
@@ -556,6 +702,12 @@ async def main():
 - MUST NOT mix package managers
 - MUST NOT remove public methods for lint fixes
 - MUST NOT name helper classes with "Test" prefix
+
+**Systemd services:**
+- MUST use `uv run python` in ExecStart (not `.venv/bin/python`)
+- MUST use `network-online.target` with `Wants=` for network scripts
+- SHOULD use `Type=oneshot` for run-and-exit scripts
+- SHOULD use `Persistent=true` in timers to catch missed runs
 
 ---
 
