@@ -1,0 +1,10 @@
+[project]
+name = "semantic-view-optimization-skills"
+version = "0.1.0"
+description = "Semantic View Optimization Skills for Snova Agent"
+requires-python = ">=3.11"
+dependencies = [
+    "snowflake-connector-python[secure-local-storage]>=3.0.0",
+    "pyyaml>=6.0.2,<7",
+    "sqlglot[rs]>=27.16.3",
+]

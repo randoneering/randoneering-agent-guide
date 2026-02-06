@@ -4,15 +4,19 @@
 One liner on what the project is-cover the technology, framework, or any other relevant context
 -->
 
+The repo is for storing my agent related skills, hooks, and commands
+
+
 ## Project Context
 
 **Tech Stack:**
-- PostgreSQL [version]
-- Python [version]
-- [Other key technologies]
+- claude-code
+- cortex-code
+- copilot-cli
 
 **Primary Use Case:**
 [Describe the main purpose - e.g., "Multi-tenant SaaS application with PostgreSQL backend" or "Data pipeline for analytics warehouse"]
+The primary use case is storing and writing skills for other projects.
 
 ## Critical Rules (Always Apply First)
 
@@ -84,29 +88,10 @@ Remove skills that are not relevant to the project
 
 **Skills load automatically when relevant** - conserving context for unrelated work.
 
-### Security & Protection
-- **damage-control**: When user mentions damage control, security hooks, protected paths, blocked commands, install security, or modify protection settings
-
 ### Development Process
 - **brainstorming**: Before creative work - creating features, building components, adding functionality, or modifying behavior
 - **writing-plans**: When you have a spec or requirements for a multi-step task, before touching code
 - **executing-plans**: When you have a written implementation plan to execute in a separate session with review checkpoints
-- **systematic-debugging**: When encountering any bug, test failure, or unexpected behavior, before proposing fixes
-- **verification-before-completion**: When about to claim work is complete, fixed, or passing, before committing or creating PRs
-
-### Code Review
-- **requesting-code-review**: When completing tasks, implementing major features, or before merging to verify work meets requirements
-- **receiving-code-review**: When receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable
-
-### Language & Framework
-- **python-workflow**: Triggers: .py, pyproject.toml, uv, pip, pytest, Python
-- **api-script**: When creating Python scripts that fetch data from REST APIs, adding new API integrations, or when user asks for help with weather, IoT, or external services
-- **nix**: Triggers: .nix, flake.nix, default.nix, nixpkgs, derivation, buildRustPackage, buildPythonPackage, NixOS modules
-
-### Database & Data Engineering
-- **data_engineering**: When working with Snowflake (query optimization, warehouse configuration) or developing DBT models (data quality testing and validation)
-- **pg_design**: When designing database schemas, implementing table partitioning, setting up HA/DR with replication, building multi-tenant SaaS applications, architecting scalable PostgreSQL systems, planning failover strategies, or designing data models
-- **pg_optimization**: When tuning PostgreSQL configuration parameters, analyzing slow queries, optimizing query performance, working with cloud-managed PostgreSQL (RDS/Cloud SQL/Azure), monitoring database health, detecting bloat or missing indexes, troubleshooting performance issues, designing indexes, or managing replication
 
 ### Documentation & Writing
 - **documentation**: Triggers: README, CHANGELOG, API docs, technical writing, user guides, code comments
