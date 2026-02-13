@@ -445,11 +445,14 @@ framework 'Security' not found
 
 **Solution:**
 ```nix
-buildInputs = lib.optionals stdenv.isDarwin [
-  darwin.apple_sdk.frameworks.Security
-  darwin.apple_sdk.frameworks.SystemConfiguration
-  darwin.apple_sdk.frameworks.CoreFoundation
-];
+# nixpkgs-unstable removed legacy darwin.apple_sdk.frameworks.* references.
+# Use the default SDK from stdenv and patch paths with $SDKROOT when needed.
+
+preConfigure = lib.optionalString stdenv.isDarwin ''
+  substituteInPlace Makefile \
+    --replace-fail "/System/Library/Frameworks" \
+                   "$SDKROOT/System/Library/Frameworks"
+'';
 ```
 
 ## License and Meta Issues

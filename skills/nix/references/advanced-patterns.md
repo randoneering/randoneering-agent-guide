@@ -20,8 +20,7 @@ buildRustPackage {
     else null;
   
   # Platform-specific dependencies
-  buildInputs = lib.optionals stdenv.isLinux [ systemd ]
-    ++ lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.Security ];
+  buildInputs = lib.optionals stdenv.isLinux [ systemd ];
 }
 ```
 
@@ -34,15 +33,20 @@ buildRustPackage {
 - `buildInputs`: Libraries for host platform, used by target platform (most common)
 - `depsTargetTarget`: Libraries for target platform, used by target platform
 
-### Darwin-Specific Frameworks
+### Darwin SDK Pattern (nixpkgs-unstable)
 
 ```nix
-buildInputs = lib.optionals stdenv.isDarwin [
-  darwin.apple_sdk.frameworks.Security
-  darwin.apple_sdk.frameworks.SystemConfiguration
-  darwin.apple_sdk.frameworks.CoreFoundation
-  darwin.apple_sdk.frameworks.Foundation
-];
+# Do not use darwin.apple_sdk.frameworks.* on unstable.
+# The default SDK is provided by stdenv.
+
+preConfigure = lib.optionalString stdenv.isDarwin ''
+  substituteInPlace src/config.h \
+    --replace-fail "/System/Library/Frameworks" \
+                   "$SDKROOT/System/Library/Frameworks"
+'';
+
+# For explicit SDK pinning, use apple-sdk_* packages.
+# Example: nativeBuildInputs = [ apple-sdk_13 ];
 ```
 
 ## Advanced Flake Patterns

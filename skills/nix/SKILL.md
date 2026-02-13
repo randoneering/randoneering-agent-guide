@@ -562,11 +562,27 @@ stdenv.mkDerivation {
 ```nix
 buildInputs = [ 
   common-dep
-] ++ lib.optionals stdenv.isDarwin [
-  darwin.apple_sdk.frameworks.Security
 ] ++ lib.optionals stdenv.isLinux [
   systemd
 ];
+
+# On nixpkgs-unstable Darwin, do not use darwin.apple_sdk.frameworks.*.
+# The default SDK from stdenv is used automatically.
+```
+
+### Darwin SDK (nixpkgs-unstable)
+
+- Legacy `darwin.apple_sdk`, `darwin.apple_sdk_11_0`, and `darwin.apple_sdk_12_3` references are removed.
+- If a package still references `darwin.apple_sdk.frameworks.*`, remove those references.
+- If a derivation needs explicit framework paths, use `$SDKROOT/System/Library/Frameworks/...` in `preConfigure`.
+- For explicit SDK version control, use `apple-sdk_*` packages (for example `apple-sdk_13`) instead of legacy `apple_sdk` aliases.
+
+```nix
+preConfigure = lib.optionalString stdenv.isDarwin ''
+  substituteInPlace build.zig \
+    --replace-fail "/System/Library/Frameworks/OpenGL.framework" \
+                   "$SDKROOT/System/Library/Frameworks/OpenGL.framework"
+'';
 ```
 
 ## File Organization
