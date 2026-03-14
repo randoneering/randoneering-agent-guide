@@ -1,17 +1,10 @@
 ---
 name: writing-style
-<<<<<<< HEAD
-description: "Justin's personal blog writing style for Hugo site content. Triggers: blog posts, weekly updates, technical tutorials. Covers conversational tone, honest reflection, technical accessibility, and storytelling approach."
-=======
 description: "Justin's personal blog writing style for Hugo site content. Triggers: blog posts, weekly updates, technical tutorials. Covers conversational tone, honest reflection, technical accessibility, Strunk's clarity principles, and AI pattern avoidance."
->>>>>>> 5fb3d0517e80771eb8e4dc24d72174698fd83774
 ---
 
 # Justin's Writing Style Guide
 
-<<<<<<< HEAD
-Guidelines for writing blog posts and content that matches the established voice and style of this Hugo site.
-=======
 Guidelines for writing blog posts and content that matches the established voice and style of this Hugo site. Combines personal voice with Strunk's clarity principles.
 
 ## Strunk's Clarity Principles
@@ -33,7 +26,6 @@ These rules from *The Elements of Style* apply to all writing:
 - Begin paragraphs with topic sentence
 - Express coordinate ideas in similar form
 - Keep to one tense in summaries
->>>>>>> 5fb3d0517e80771eb8e4dc24d72174698fd83774
 
 ## Core Voice Characteristics
 
@@ -58,10 +50,7 @@ These rules from *The Elements of Style* apply to all writing:
 - Share actual code examples and configurations
 - Reference documentation and sources with links or footnotes
 - Balance technical depth with readability
-<<<<<<< HEAD
-=======
 - Use definite, specific language — say what the code actually does
->>>>>>> 5fb3d0517e80771eb8e4dc24d72174698fd83774
 
 ## Tone and Language
 
@@ -184,8 +173,6 @@ Interesting right? Turns out I needed to grab roles...
 - Explain parameters and flags
 - Warn about pitfalls: "I highly recommend... to AVOID putting a compression higher than 5"
 
-<<<<<<< HEAD
-=======
 ### Clarity in Technical Prose
 
 Apply Strunk's principles to technical writing:
@@ -194,7 +181,6 @@ Apply Strunk's principles to technical writing:
 - **Concrete language:** "Returns a 500 error after 30 seconds" not "Times out eventually"
 - **Cut the fluff:** Remove "basically", "essentially", "in order to", "the fact that"
 
->>>>>>> 5fb3d0517e80771eb8e4dc24d72174698fd83774
 ### Citations and Sources
 
 Use footnotes for references:
@@ -234,20 +220,6 @@ Include sources at the end of articles, especially for:
 
 ## What to Avoid
 
-<<<<<<< HEAD
-### Don't Use AI Buzzwords
-- No "leverage", "synergy", "cutting-edge"
-- No "seamlessly", "robust", "innovative"
-- Just say what it actually does
-
-### Don't Be Overly Formal
-- Avoid academic/corporate tone
-- No "moreover", "furthermore", "in conclusion"
-- No "it is important to note that"
-- No "in today's fast-paced world"
-
-### Don't Hide Complexity
-=======
 ### AI Writing Patterns
 
 LLMs regress to statistical means, producing generic, puffy prose. Avoid:
@@ -302,17 +274,12 @@ Just say what it actually does.
 - ❌ "Errors were encountered" → ✅ "The build hit three errors"
 
 ### Hiding Complexity
->>>>>>> 5fb3d0517e80771eb8e4dc24d72174698fd83774
 - Don't pretend things were easy if they weren't
 - Don't skip the messy parts
 - Don't oversell your solution
 - Share both successes and failures
 
-<<<<<<< HEAD
-### Don't Gatekeep
-=======
 ### Gatekeeping
->>>>>>> 5fb3d0517e80771eb8e4dc24d72174698fd83774
 - Don't shame "normies" (except good-natured Twitter jokes)
 - Don't assume everyone knows what you know
 - Do explain acronyms and terms
@@ -376,24 +343,6 @@ Regular updates and news
 ## Quick Reference Checklist
 
 Before publishing, verify:
-<<<<<<< HEAD
-- [ ] Written in first person with personal experience
-- [ ] Conversational tone, not corporate or academic
-- [ ] Technical concepts explained clearly
-- [ ] Code examples with context and explanation
-- [ ] Honest about challenges and mistakes
-- [ ] Headers organize content logically
-- [ ] Sources cited with footnotes or links
-- [ ] No AI buzzwords or corporate speak
-- [ ] Reflects actual learning journey
-- [ ] Ends with practical takeaway or next steps
-
-**Key principle:** Write like you're explaining to a friend over coffee, not presenting at a conference. Be technical, be honest, be yourself.
-
----
-
-**Note:** This is about voice and style, not content requirements. The goal is authenticity and accessibility, not perfection.
-=======
 
 **Voice:**
 - [ ] Written in first person with personal experience
@@ -428,4 +377,3 @@ Before publishing, verify:
 ---
 
 **Note:** This is about voice and style, not content requirements. The goal is authenticity, clarity, and accessibility.
->>>>>>> 5fb3d0517e80771eb8e4dc24d72174698fd83774
