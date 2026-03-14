@@ -1,6 +1,6 @@
 # Randoneering Agent Guide
 
-Skills, hooks, and commands for Claude Code and other coding agents.
+Skills, agents, hooks, commands, and integration docs for Claude Code and other coding agents.
 
 ## Skills
 
@@ -13,9 +13,26 @@ Skills, hooks, and commands for Claude Code and other coding agents.
 | **Code Review** | [requesting-code-review](skills/requesting-code-review/), [receiving-code-review](skills/receiving-code-review/) |
 | **Writing** | [documentation](skills/documentation/), [writing-skills](skills/writing-skills/), [writing-style](skills/writing-style/) |
 
+## Agents
+
+| Category | Contents |
+|----------|----------|
+| **Engineering** | task-focused specialists for implementation, architecture, security, DevOps, and review |
+| **Design** | UX, UI, research, brand, storytelling, and visual design agents |
+| **Product** | research, prioritization, feedback synthesis, and product strategy agents |
+| **Project Management** | planning, tracking, workflow, and delivery-oriented agents |
+| **Testing** | evidence, API, accessibility, performance, and validation agents |
+| **Support** | reporting, compliance, infrastructure, finance, and support agents |
+| **Strategy** | orchestration docs, playbooks, runbooks, and coordination guides |
+| **Integrations** | converted formats and install docs for supported agent tools |
+
 ## Structure
 
 ```
+agents/
+├── {category}/
+│   └── <domain>-<role>.md   # Agent definition
+│
 skills/
 ├── {skill}/
 │   ├── SKILL.md           # Main skill definition
@@ -24,7 +41,8 @@ skills/
 
 ## Usage
 
-Copy skills to your project's `.claude/skills/` directory or reference them in your `CLAUDE.md`.
+- Copy skills to your project's `.claude/skills/` directory or reference them in your `CLAUDE.md`
+- Copy agents from `agents/` into the target tool's agent location, or use the docs in `agents/integrations/`
 
 ## Configuration
 
