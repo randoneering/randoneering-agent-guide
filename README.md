@@ -6,12 +6,13 @@ Skills, agents, hooks, commands, and integration docs for Claude Code and other 
 
 | Category | Skills |
 |----------|--------|
-| **Data** | [dbt](skills/dbt/), [postgres](skills/postgres/), [snowflake](skills/snowflake/) |
-| **Development** | [python](skills/python/), [nix](skills/nix/), [automation](skills/automation/) |
-| **Process** | [brainstorming](skills/brainstorming/), [writing-plans](skills/writing-plans/), [executing-plans](skills/executing-plans/) |
+| **Core Workflow** | [using-superpowers](skills/using-superpowers/), [brainstorming](skills/brainstorming/), [writing-plans](skills/writing-plans/), [executing-plans](skills/executing-plans/) |
+| **Development Workflow** | [test-driven-development](skills/test-driven-development/), [subagent-driven-development](skills/subagent-driven-development/), [dispatching-parallel-agents](skills/dispatching-parallel-agents/), [using-git-worktrees](skills/using-git-worktrees/), [finishing-a-development-branch](skills/finishing-a-development-branch/) |
 | **Quality** | [systematic-debugging](skills/systematic-debugging/), [damage-control](skills/damage-control/), [verification-before-completion](skills/verification-before-completion/) |
 | **Code Review** | [requesting-code-review](skills/requesting-code-review/), [receiving-code-review](skills/receiving-code-review/) |
 | **Writing** | [documentation](skills/documentation/), [writing-skills](skills/writing-skills/), [writing-style](skills/writing-style/) |
+| **Data** | [dbt](skills/dbt/), [postgres](skills/postgres/), [snowflake](skills/snowflake/) |
+| **Development Stacks** | [python](skills/python/), [nix](skills/nix/), [automation](skills/automation/), [flox](skills/flox/) |
 
 ## Agents
 
@@ -35,8 +36,12 @@ agents/
 │
 skills/
 ├── {skill}/
-│   ├── SKILL.md           # Main skill definition
+│   ├── SKILL.md           # Top-level skill
 │   └── references/        # Supporting docs (optional)
+└── {domain}/
+    └── {skill}/
+        ├── SKILL.md       # Domain-specific skill
+        └── references/    # Supporting docs (optional)
 ```
 
 ## Usage
