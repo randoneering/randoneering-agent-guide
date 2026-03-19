@@ -1,6 +1,6 @@
 ---
 name: adding-dbt-unit-test
-description: Use when adding unit tests for a dbt model or practicing test-driven development (TDD) in dbt
+description: Creates unit test YAML definitions that mock upstream model inputs and validate expected outputs. Use when adding unit tests for a dbt model or practicing test-driven development (TDD) in dbt.
 user-invocable: false
 metadata:
   author: dbt-labs
@@ -8,11 +8,25 @@ metadata:
 
 # Add unit test for a dbt model
 
+## Additional Resources
+
+- [Spec Reference](references/spec.md) - All required and optional YAML keys for unit tests
+- [Examples](references/examples.md) - Unit test examples across formats (dict, csv, sql)
+- [Incremental Models](references/special-cases-incremental-model.md) - Unit testing incremental models
+- [Ephemeral Dependencies](references/special-cases-ephemeral-dependency.md) - Unit testing models depending on ephemeral models
+- [Special Case Overrides](references/special-cases-special-case-overrides.md) - Introspective macros, project variables, environment variables
+- [Versioned Models](references/special-cases-versioned-model.md) - Unit testing versioned SQL models
+- [BigQuery Caveats](references/warehouse-bigquery-caveats.md) - BigQuery-specific caveats
+- [BigQuery Data Types](references/warehouse-bigquery-data-types.md) - BigQuery data type handling
+- [Postgres Data Types](references/warehouse-postgres-data-types.md) - Postgres data type handling
+- [Redshift Caveats](references/warehouse-redshift-caveats.md) - Redshift-specific caveats
+- [Redshift Data Types](references/warehouse-redshift-data-types.md) - Redshift data type handling
+- [Snowflake Data Types](references/warehouse-snowflake-data-types.md) - Snowflake data type handling
+- [Spark Data Types](references/warehouse-spark-data-types.md) - Spark data type handling
+
 ## What are unit tests in dbt
 
-In software programming, unit tests validate small portions of your functional code, and they work much the same way in dbt. dbt unit tests allow you to validate your SQL modeling logic on a small set of static inputs _before_ you materialize your full model in production. dbt unit tests enable test-driven development, benefiting developer efficiency and code reliability.
-
-Unit tests allow enforcing that all the unit tests for a model pass before it is materialized (i.e. dbt won't materialize the model in the database if *any* of its unit tests do not pass).
+dbt unit tests validate SQL modeling logic on static inputs before materializing in production. If any unit test for a model fails, dbt will not materialize that model.
 
 ## When to use
 
@@ -346,12 +360,3 @@ dbt run --select "stg_customers top_level_email_domains" --empty
 | Missing `input` for a `ref` or `source` | Include all model dependencies to avoid "node not found" errors |
 | Testing Python models or snapshots | Unit tests only support SQL models |
 
-### Similar testing concepts
-
-There are similar concepts that dbt's `model`, `given`, `expect` lines up with (Hoare triple, Arrange-Act-Assert, Gherkin, What's in a Story?, etc):
-
-| dbt unit test | Description                                | Hoare triple | Arrange-Act-Assert | Gherkin | What's in a Story? |
-|---------------|--------------------------------------------|------------------------------------------------------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| **`model`**   | when running the command for this model    | Command                                                                | Act                                                                             | When                                                   | Event                                                                                                                                |
-| **`given`**   | given these test inputs as  preconditions  | Precondition                                                           | Arrange                                                                         | Given                                                  | Givens                                                                                                                               |
-| **`expect`**  | then expect this output as a postcondition | Postcondition                                                          | Assert                                                                          | Then                                                   | Outcome                                                                                                                              |
