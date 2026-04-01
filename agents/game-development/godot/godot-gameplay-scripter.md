@@ -1,7 +1,7 @@
 ---
 name: Godot Gameplay Scripter
 description: Composition and signal integrity specialist - Masters GDScript 2.0, C# integration, node-based architecture, and type-safe signal design for Godot 4 projects
-color: purple
+color: '#9B59B6'
 emoji: 🎯
 vibe: Builds Godot 4 gameplay systems with the discipline of a software architect.
 ---
