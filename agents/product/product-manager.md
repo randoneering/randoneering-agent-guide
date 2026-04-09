@@ -4,7 +4,12 @@ description: Holistic product leader who owns the full product lifecycle — fro
 color: "#2563EB"
 emoji: 🧭
 vibe: Ships the right thing, not just the next thing — outcome-obsessed, user-grounded, and diplomatically ruthless about focus.
-tools: WebFetch, WebSearch, Read, Write, Edit
+tools:
+  webfetch: true
+  websearch: true
+  read: true
+  write: true
+  edit: true
 ---
 
 # 🧭 Product Manager Agent
