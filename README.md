@@ -10,18 +10,23 @@ Skills, agents, hooks, commands, and integration docs for Claude Code and other 
 | **Development Workflow** | [test-driven-development](skills/test-driven-development/), [subagent-driven-development](skills/subagent-driven-development/), [dispatching-parallel-agents](skills/dispatching-parallel-agents/), [using-git-worktrees](skills/using-git-worktrees/), [finishing-a-development-branch](skills/finishing-a-development-branch/) |
 | **Quality** | [systematic-debugging](skills/systematic-debugging/), [damage-control](skills/damage-control/), [verification-before-completion](skills/verification-before-completion/) |
 | **Code Review** | [requesting-code-review](skills/requesting-code-review/), [receiving-code-review](skills/receiving-code-review/) |
-| **Writing** | [documentation](skills/documentation/), [writing-skills](skills/writing-skills/), [writing-style](skills/writing-style/) |
-| **Data** | [dbt](skills/dbt/), [postgres](skills/postgres/), [snowflake](skills/snowflake/) |
+| **Writing** | [documentation](skills/documentation/), [writing-skills](skills/writing-skills/), [writing-style](skills/writing-style/), [resume-tailor](skills/resume-tailor/) |
+| **Data** | [dbt](skills/dbt/), [postgres](skills/postgres/), [snowflake](skills/snowflake/), [clickhouse](skills/clickhouse/), [neon](skills/neon/) |
 | **Development Stacks** | [python](skills/python/), [nix](skills/nix/), [automation](skills/automation/), [flox](skills/flox/) |
+| **Cloud & Infrastructure** | [cloudflare](skills/cloudflare/), [hashicorp](skills/hashicorp/) |
+| **Security** | [trail_of_bits](skills/trail_of_bits/), [sentry](skills/sentry/) |
 
 ## Agents
 
 | Category | Contents |
 |----------|----------|
 | **Engineering** | task-focused specialists for implementation, architecture, security, DevOps, and review |
-| **Design** | UX, UI, research, brand, storytelling, and visual design agents |
+| **Marketing** | content, campaign, paid media, SEO, and growth agents |
 | **Product** | research, prioritization, feedback synthesis, and product strategy agents |
 | **Project Management** | planning, tracking, workflow, and delivery-oriented agents |
+| **Specialized** | domain-specific specialists across sales, finance, legal, and other functions |
+| **Spatial Computing** | XR, AR/VR, and spatial interface agents |
+| **Academic** | research, writing, and analysis agents for academic work |
 | **Testing** | evidence, API, accessibility, performance, and validation agents |
 | **Support** | reporting, compliance, infrastructure, finance, and support agents |
 | **Strategy** | orchestration docs, playbooks, runbooks, and coordination guides |
