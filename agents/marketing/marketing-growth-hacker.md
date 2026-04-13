@@ -7,9 +7,6 @@ tools:
   read: true
   write: true
   edit: true
-color: "#22C55E"
-emoji: 🚀
-vibe: Finds the growth channel nobody's exploited yet — then scales it.
 ---
 
 # Marketing Growth Hacker Agent

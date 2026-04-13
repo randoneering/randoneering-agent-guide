@@ -1,6 +1,6 @@
 # Randoneering Agent Guide
 
-Skills, agents, hooks, commands, and integration docs for Claude Code and other coding agents.
+Skills, agents, hooks, commands, and integration docs for OpenCode, pi, and other coding agents.
 
 ## Skills
 
@@ -49,12 +49,22 @@ skills/
 
 ## Usage
 
-- Copy skills to your project's `.claude/skills/` directory or reference them in your `CLAUDE.md`
-- Copy agents from `agents/` into the target tool's agent location, or use the docs in `agents/integrations/`
+- OpenCode: copy skills into `.claude/skills/` or load them from a shared repo path referenced by `AGENTS.md`
+- pi: copy skills into `.pi/skills/` or `.agents/skills/`, or point pi at this repo via its `skills` setting
+- Agent files in `agents/` are plain Markdown prompts with portable `name` and `description` frontmatter; use them as prompt templates, imported agents, or source material for tool-specific packaging
 
 ## Configuration
 
-The `.claude/CLAUDE.md` template provides project-specific agent configuration. Copy it to your project and customize.
+- OpenCode reads project instructions from `AGENTS.md`
+- pi reads `AGENTS.md` and also supports `CLAUDE.md`
+- Use repo-local `AGENTS.md` for shared instructions when targeting both harnesses
+
+## Compatibility
+
+- Skills use the Agent Skills `SKILL.md` structure, which both OpenCode and pi can consume
+- Skills may include optional frontmatter such as `allowed-tools`, `compatibility`, `metadata`, or `user-invocable`; pi ignores unknown fields and OpenCode can still use the instructions
+- Agent files keep only the portable frontmatter subset: `name` and `description`
+- Runtime features still vary by harness. Skills that mention subagents, todo tools, or platform-specific commands may require harness-specific adaptation during execution
 
 ## License
 

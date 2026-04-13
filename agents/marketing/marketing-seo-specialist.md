@@ -7,9 +7,6 @@ tools:
   read: true
   write: true
   edit: true
-color: "#4285F4"
-emoji: 🔍
-vibe: Drives sustainable organic traffic through technical SEO and content strategy.
 ---
 
 # Marketing SEO Specialist

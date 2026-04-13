@@ -7,9 +7,6 @@ tools:
   read: true
   write: true
   edit: true
-color: "#14B8A6"
-emoji: ✍️
-vibe: Crafts compelling stories across every platform your audience lives on.
 ---
 
 # Marketing Content Creator Agent
