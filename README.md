@@ -40,13 +40,11 @@ agents/
 │   └── <domain>-<role>.md   # Agent definition
 │
 skills/
-├── {skill}/
-│   ├── SKILL.md           # Top-level skill
-│   └── references/        # Supporting docs (optional)
-└── {domain}/
-    └── {skill}/
-        ├── SKILL.md       # Domain-specific skill
-        └── references/    # Supporting docs (optional)
+└── {category}/
+    ├── {skill}/
+    │   ├── SKILL.md       # Skill definition
+    │   └── references/    # Supporting docs (optional)
+    └── README.md          # Category or package notes (optional)
 ```
 
 ## Usage
