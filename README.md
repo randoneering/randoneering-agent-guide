@@ -10,7 +10,7 @@ Skills, agents, hooks, commands, and integration docs for OpenCode, pi, and othe
 | **Development Workflow** | [test-driven-development](skills/test-driven-development/), [subagent-driven-development](skills/subagent-driven-development/), [dispatching-parallel-agents](skills/dispatching-parallel-agents/), [using-git-worktrees](skills/using-git-worktrees/), [finishing-a-development-branch](skills/finishing-a-development-branch/) |
 | **Quality** | [systematic-debugging](skills/systematic-debugging/), [damage-control](skills/damage-control/), [verification-before-completion](skills/verification-before-completion/) |
 | **Code Review** | [requesting-code-review](skills/requesting-code-review/), [receiving-code-review](skills/receiving-code-review/) |
-| **Writing** | [documentation](skills/documentation/), [writing-skills](skills/writing-skills/), [writing-style](skills/writing-style/), [resume-tailor](skills/resume-tailor/) |
+| **Writing** | [documentation-writing](skills/documentation-writing/), [writing-skills](skills/writing-skills/), [writing-style](skills/writing-style/), [resume-tailor](skills/resume-tailor/) |
 | **Data** | [dbt](skills/dbt/), [postgres](skills/postgres/), [snowflake](skills/snowflake/), [clickhouse](skills/clickhouse/), [neon](skills/neon/) |
 | **Development Stacks** | [python](skills/python/), [nix](skills/nix/), [automation](skills/automation/), [flox](skills/flox/) |
 | **Cloud & Infrastructure** | [cloudflare](skills/cloudflare/), [hashicorp](skills/hashicorp/) |

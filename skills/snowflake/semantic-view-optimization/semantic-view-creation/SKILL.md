@@ -187,17 +187,17 @@ Present summary: name, location, counts (tables, columns, relationships, metrics
 **Option 1: Test with AUDIT MODE** (Recommended)
 
 - Run AUDIT MODE to test VQRs and identify optimization opportunities
-- Load `../audit/SKILL.md`
+- Load `../semantic-view-optimization-audit/SKILL.md`
 
 **Option 2: Debug SQL Generation**
 
 - Run DEBUG MODE to troubleshoot specific SQL generation issues
-- Load `../debug/SKILL.md`
+- Load `../semantic-view-optimization-debug/SKILL.md`
 
 **Option 3: Deploy to Snowflake**
 
 - Upload semantic view to Snowflake
-- Load `../upload/SKILL.md`
+- Load `../semantic-view-upload/SKILL.md`
 
 **Option 4: Manual Refinement**
 

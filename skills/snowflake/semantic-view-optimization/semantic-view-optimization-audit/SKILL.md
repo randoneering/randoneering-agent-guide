@@ -4,9 +4,9 @@ description: Comprehensive audit system for semantic views with multiple audit t
 required_skills:
   [
     semantic-view-optimization-onboarding,
-    audit/vqr_testing/SKILL,
-    audit/best_practices/SKILL,
-    audit/custom_criteria/SKILL,
+    semantic-view-optimization-audit/vqr-testing-audit/SKILL,
+    semantic-view-optimization-audit/best-practices-audit/SKILL,
+    semantic-view-optimization-audit/custom-criteria-audit/SKILL,
   ]
 ---
 
@@ -19,7 +19,7 @@ required_skills:
 **Required:**
 
 - Loaded `reference/semantic_view_concepts.md`
-- Loaded `setup/SKILL.md`
+- Loaded `semantic-view-optimization-setup/SKILL.md`
 - Created workspace directory
 - Understand semantic view tools and concepts
 
@@ -44,7 +44,7 @@ Provide comprehensive semantic view auditing through multiple specialized audit 
 
 ## Workflow
 
-**CRITICAL**: Make sure setup step has completed before proceeding. See [../setup/SKILL.md](../setup/SKILL.md).
+**CRITICAL**: Make sure setup step has completed before proceeding. See [../semantic-view-optimization-setup/SKILL.md](../semantic-view-optimization-setup/SKILL.md).
 
 ### Phase 1: Audit Type Selection
 
@@ -68,13 +68,13 @@ Based on user selection, load the appropriate audit skill:
 
 **Option 1: VQR Testing**
 
-- Load `vqr_testing/SKILL.md`
+- Load `vqr-testing-audit/SKILL.md`
 - Execute VQR testing workflow
 - Identify which VQRs fail without hints
 
 **Option 2: Best Practices**
 
-- Load `best_practices/SKILL.md`
+- Load `best-practices-audit/SKILL.md`
 - Check naming conventions, descriptions, metadata completeness
 - Detect inconsistencies (conflicting definitions, logical errors)
 - Identify duplicates (redundant information across the model)
@@ -82,7 +82,7 @@ Based on user selection, load the appropriate audit skill:
 
 **Option 3: Custom Criteria**
 
-- Load `custom_criteria/SKILL.md`
+- Load `custom-criteria-audit/SKILL.md`
 - Prompt user for criteria
 - Evaluate and report findings
 

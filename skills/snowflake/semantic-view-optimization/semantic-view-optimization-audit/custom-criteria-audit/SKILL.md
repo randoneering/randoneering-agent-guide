@@ -4,7 +4,7 @@ description: Evaluate semantic view against user-defined validation rules and cu
 required_skills:
   [
     semantic-view-optimization-onboarding,
-    audit/custom_criteria/results_formatting,
+    semantic-view-optimization-audit/custom-criteria-audit/results_formatting,
     reference/semantic_view_get,
     reference/semantic_view_concepts,
   ]

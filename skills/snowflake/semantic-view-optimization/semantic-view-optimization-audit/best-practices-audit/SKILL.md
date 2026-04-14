@@ -4,10 +4,10 @@ description: Verify semantic view compliance with established best practices inc
 required_skills:
   [
     semantic-view-optimization-onboarding,
-    audit/best_practices/results_formatting,
-    audit/best_practices/inconsistencies,
-    audit/best_practices/duplicates,
-    audit/best_practices/missing_relationships,
+    semantic-view-optimization-audit/best-practices-audit/results_formatting,
+    semantic-view-optimization-audit/best-practices-audit/inconsistencies,
+    semantic-view-optimization-audit/best-practices-audit/duplicates,
+    semantic-view-optimization-audit/best-practices-audit/missing_relationships,
     reference/semantic_view_get,
     reference/semantic_view_concepts,
   ]

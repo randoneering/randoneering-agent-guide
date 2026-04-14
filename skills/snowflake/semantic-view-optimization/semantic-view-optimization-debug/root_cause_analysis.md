@@ -49,7 +49,7 @@ Check for missing tables/joins (especially intermediate tables like hierarchy ta
 
 ### Step 2.5: Load Optimization Framework
 
-**MANDATORY**: Load `../optimization/SKILL.md`
+**MANDATORY**: Load `../semantic-view-optimization-patterns/SKILL.md`
 
 This provides:
 

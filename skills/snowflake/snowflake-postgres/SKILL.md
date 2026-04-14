@@ -11,7 +11,7 @@ When a user wants to manage Snowflake Postgres instances via Snowflake SQL.
 
 ## Setup
 
-1. **Check for connection**: Verify a saved connection using the `connect/SKILL.md` workflow.
+1. **Check for connection**: Verify a saved connection using the `snowflake-postgres-connect/SKILL.md` workflow.
 2. **Load references** as needed based on intent.
 
 ## Connection Storage (PostgreSQL Standard Files)
@@ -69,8 +69,8 @@ For multi-step operations, use `system_todo_write` to show progress:
 
 | Intent | Trigger Phrases | Route |
 |--------|-----------------|-------|
-| **MANAGE** | "create instance", "show instances", "list instances", "suspend", "resume", "describe", "rotate password", "reset credentials", "reset access" | Load `manage/SKILL.md` |
-| **CONNECT** | "my IP", "network policy", "can't connect", "add IP", "import connection" | Load `connect/SKILL.md` |
+| **MANAGE** | "create instance", "show instances", "list instances", "suspend", "resume", "describe", "rotate password", "reset credentials", "reset access" | Load `snowflake-postgres-manage/SKILL.md` |
+| **CONNECT** | "my IP", "network policy", "can't connect", "add IP", "import connection" | Load `snowflake-postgres-connect/SKILL.md` |
 
 ### Unrecognized or Extended Operations
 
@@ -98,8 +98,8 @@ After detecting intent, you MUST:
 
 | Intent | Action |
 |--------|--------|
-| **MANAGE** | Load `manage/SKILL.md` → Execute SQL immediately |
-| **CONNECT** | Load `connect/SKILL.md` → Execute workflow immediately |
+| **MANAGE** | Load `snowflake-postgres-manage/SKILL.md` → Execute SQL immediately |
+| **CONNECT** | Load `snowflake-postgres-connect/SKILL.md` → Execute workflow immediately |
 
 ❌ **WRONG:** Load skill, then stop or explain
 ✅ **RIGHT:** Load skill, then execute the command/workflow

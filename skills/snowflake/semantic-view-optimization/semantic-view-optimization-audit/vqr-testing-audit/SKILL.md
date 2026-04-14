@@ -4,9 +4,9 @@ description: Systematically test semantic views by evaluating all verified queri
 required_skills:
   [
     semantic-view-optimization-onboarding,
-    audit/vqr_testing/vqr_extraction,
-    audit/vqr_testing/vqr_evaluation,
-    audit/vqr_testing/results_formatting,
+    semantic-view-optimization-audit/vqr-testing-audit/vqr_extraction,
+    semantic-view-optimization-audit/vqr-testing-audit/vqr_evaluation,
+    semantic-view-optimization-audit/vqr-testing-audit/results_formatting,
     reference/sql_comparison,
     reference/semantic_view_concepts,
   ]

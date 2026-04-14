@@ -33,4 +33,4 @@ Present audit results clearly to user.
 
 ## Next Action
 
-Return to `vqr_testing/SKILL.md` Phase 5 for next steps prompt.
+Return to `vqr-testing-audit/SKILL.md` Phase 5 for next steps prompt.

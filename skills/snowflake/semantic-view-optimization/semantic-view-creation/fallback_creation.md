@@ -217,7 +217,7 @@ File: /path/to/<semantic_view_name>.yaml
 Next steps:
 - Run AUDIT MODE for comprehensive testing
 - Run DEBUG MODE for troubleshooting
-- Use upload/SKILL.md to deploy to Snowflake
+- Use semantic-view-upload/SKILL.md to deploy to Snowflake
 ```
 
 **⚠️ MANDATORY STOPPING POINT**: Present results and wait for feedback.
@@ -226,7 +226,7 @@ Next steps:
 
 - **AUDIT MODE**: Comprehensive VQR testing and optimization
 - **DEBUG MODE**: Troubleshoot SQL generation issues
-- **Upload**: Deploy to Snowflake (`../upload/SKILL.md`)
+- **Upload**: Deploy to Snowflake (`../semantic-view-upload/SKILL.md`)
 
 ## Tools
 

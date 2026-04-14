@@ -106,4 +106,4 @@ Present custom criteria validation results clearly with compliance rates, violat
 
 ## Next Action
 
-Return to `custom_criteria/SKILL.md` Phase 7 for next steps prompt.
+Return to `custom-criteria-audit/SKILL.md` Phase 7 for next steps prompt.

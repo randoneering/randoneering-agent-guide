@@ -35,7 +35,7 @@ Read the semantic view YAML file to extract:
 2. Validation check: Ensure the YAML is well-formed
 
 **Determining database.schema:**
-- Check if the optimization session has setup information (from setup/SKILL.md step)
+- Check if the optimization session has setup information (from semantic-view-optimization-setup/SKILL.md step)
 - If setup was run, use the original semantic view's fully qualified name (DATABASE.SCHEMA.SEMANTIC_VIEW) as the target location
 - Extract database and schema from that fully qualified name
 - This ensures the semantic view is uploaded to the same location as the original semantic view being optimized

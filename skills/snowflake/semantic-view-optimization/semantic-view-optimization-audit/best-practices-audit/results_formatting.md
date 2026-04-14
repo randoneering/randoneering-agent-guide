@@ -174,4 +174,4 @@ Present results in order: (1) Overall Summary, (2) Best Practices by severity, (
 
 ## Next Action
 
-Return to `best_practices/SKILL.md` Phase 5 for next steps prompt.
+Return to `best-practices-audit/SKILL.md` Phase 5 for next steps prompt.

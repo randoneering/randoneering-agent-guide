@@ -88,5 +88,5 @@ Present mode selection.
 
 ## Next Skills
 
-- AUDIT MODE → [audit/SKILL.md](../audit/SKILL.md)
-- DEBUG MODE → [debug/SKILL.md](../debug/SKILL.md)
+- AUDIT MODE → [semantic-view-optimization-audit/SKILL.md](../semantic-view-optimization-audit/SKILL.md)
+- DEBUG MODE → [semantic-view-optimization-debug/SKILL.md](../semantic-view-optimization-debug/SKILL.md)

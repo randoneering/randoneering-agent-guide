@@ -1,5 +1,5 @@
 ---
-name: Damage Control
+name: damage-control
 description: Install, configure, and manage the Claude Code Damage Control security hooks system. Use when user mentions damage control, security hooks, protected paths, blocked commands, install security, or modify protection settings.
 ---
 

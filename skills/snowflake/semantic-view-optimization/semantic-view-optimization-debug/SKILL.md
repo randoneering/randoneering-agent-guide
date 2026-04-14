@@ -22,7 +22,7 @@ required_skills:
 **Required:**
 
 - Loaded `reference/semantic_view_concepts.md`
-- Loaded `setup/SKILL.md`
+- Loaded `semantic-view-optimization-setup/SKILL.md`
 - Created workspace directory
 - Understand semantic view tools and concepts
 
@@ -48,7 +48,7 @@ All steps below are MANDATORY and cannot be skipped.
 
 ## Workflow
 
-**CRITICAL**: Make sure setup step has completed before proceeding. See [../setup/SKILL.md](../setup/SKILL.md).
+**CRITICAL**: Make sure setup step has completed before proceeding. See [../semantic-view-optimization-setup/SKILL.md](../semantic-view-optimization-setup/SKILL.md).
 
 ### Step 1: Diagnosis
 

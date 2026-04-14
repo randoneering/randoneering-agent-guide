@@ -34,7 +34,7 @@ When a user wants to create, debug, or optimize semantic views for Cortex Analys
 
 ### Step 2: Complete Setup ✋ BLOCKING
 
-**Load**: [setup/SKILL.md](setup/SKILL.md)
+**Load**: [semantic-view-optimization-setup/SKILL.md](semantic-view-optimization-setup/SKILL.md)
 
 **After loading:**
 
@@ -47,7 +47,7 @@ When a user wants to create, debug, or optimize semantic views for Cortex Analys
 
 ### Creation
 
-**Load**: [creation/SKILL.md](creation/SKILL.md) - Create new semantic views from scratch using table metadata and VQRs
+**Load**: [semantic-view-creation/SKILL.md](semantic-view-creation/SKILL.md) - Create new semantic views from scratch using table metadata and VQRs
 
 ### Three Primary Workflows
 
@@ -55,7 +55,7 @@ When a user wants to create, debug, or optimize semantic views for Cortex Analys
 
 Create new semantic views from scratch with proper structure, relationships, and validation.
 
-**Load**: [creation/SKILL.md](creation/SKILL.md) when user wants to CREATE a new semantic view
+**Load**: [semantic-view-creation/SKILL.md](semantic-view-creation/SKILL.md) when user wants to CREATE a new semantic view
 
 #### 1. Audit and Optimize Loop
 
@@ -65,31 +65,31 @@ Comprehensive audit system for semantic views including
 2. Best Practices verification
 3. Custom Criteria evaluation.
 
-**Load**: [audit/SKILL.md](audit/SKILL.md) when user chooses AUDIT MODE
+**Load**: [semantic-view-optimization-audit/SKILL.md](semantic-view-optimization-audit/SKILL.md) when user chooses AUDIT MODE
 
 #### 2. Debug Loop
 
 Targeted problem-solving for specific issues with SQL generation from natural language queries.
 
-**Load**: [debug/SKILL.md](debug/SKILL.md) when user chooses DEBUG MODE
+**Load**: [semantic-view-optimization-debug/SKILL.md](semantic-view-optimization-debug/SKILL.md) when user chooses DEBUG MODE
 
 ## Supporting Skills
 
 ### Validation
 
-**Load**: [validation/SKILL.md](validation/SKILL.md) - Validation procedures used by both audit and debug workflows
+**Load**: [semantic-view-optimization-validation/SKILL.md](semantic-view-optimization-validation/SKILL.md) - Validation procedures used by both audit and debug workflows
 
 ### Optimization Patterns
 
-**Load**: [optimization/SKILL.md](optimization/SKILL.md) - Library of optimization patterns for semantic view improvements
+**Load**: [semantic-view-optimization-patterns/SKILL.md](semantic-view-optimization-patterns/SKILL.md) - Library of optimization patterns for semantic view improvements
 
 ### Time Tracking (Optional)
 
-**Load**: [time_tracking/SKILL.md](time_tracking/SKILL.md) - Track execution time for tool calls and workflow steps (only load if user explicitly requests time tracking)
+**Load**: [semantic-view-optimization-time-tracking/SKILL.md](semantic-view-optimization-time-tracking/SKILL.md) - Track execution time for tool calls and workflow steps (only load if user explicitly requests time tracking)
 
 ### Upload
 
-**Load**: [upload/SKILL.md](upload/SKILL.md) - Upload optimized semantic view YAML to Snowflake (only load when user wants to deploy/upload)
+**Load**: [semantic-view-upload/SKILL.md](semantic-view-upload/SKILL.md) - Upload optimized semantic view YAML to Snowflake (only load when user wants to deploy/upload)
 
 ## Workflow Decision Tree
 
@@ -98,16 +98,16 @@ Start Session
     ↓
 MANDATORY: Complete Initialization
     ├─ Load semantic_view_concepts.md ✋
-    └─ Load setup/SKILL.md ✋
+    └─ Load semantic-view-optimization-setup/SKILL.md ✋
     ↓
 Is this a NEW semantic view?
     ↓
-    YES → Load creation/SKILL.md (CREATION MODE)
+    YES → Load semantic-view-creation/SKILL.md (CREATION MODE)
     ↓
     NO → Present Mode Selection to User
         ↓
-        ├─→ AUDIT MODE → Load audit/SKILL.md
-        └─→ DEBUG MODE → Load debug/SKILL.md
+        ├─→ AUDIT MODE → Load semantic-view-optimization-audit/SKILL.md
+        └─→ DEBUG MODE → Load semantic-view-optimization-debug/SKILL.md
 ```
 
 ## Key Principles
