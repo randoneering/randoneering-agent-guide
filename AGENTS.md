@@ -126,6 +126,11 @@ From the `writing-skills` skill: 
 - Follow the `<domain>-<role>.md` naming pattern 
 - Update strategy or integration docs when the new agent affects orchestration 
 
+## Web Search 
+
+- Always pass `workflow: "none"` when calling `web_search` — skip the browser curator by default 
+- Use `workflow: "summary-review"` only when explicitly asked to curate results 
+
 ## Tool and Skill Routing 
 
 ### dbt 
